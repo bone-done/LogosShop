@@ -12,6 +12,7 @@
 	<artifactId>LogosShop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>LogosShop</name>
+
 	<description>Online shop for Logos</description>
 	<properties>
 		<java.version>11</java.version>
@@ -54,6 +55,18 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-boot-starter</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
