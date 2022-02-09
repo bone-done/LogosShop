@@ -22,14 +22,14 @@ public class ImageServiceImpl implements ImageService {
 
     @Override
     public ImageDTO create(ImageDTO dto) {
-        Image savedEntity = repository.save(mapper.map(dto, Image.class));
-        return mapper.map(savedEntity, ImageDTO.class);
+        Image savedEntity = repository.save(map(dto));
+        return map(savedEntity);
     }
 
     @Override
     public ImageDTO update(ImageDTO dto) {
-        Image updatedEntity = repository.save(mapper.map(dto, Image.class));
-        return mapper.map(updatedEntity, ImageDTO.class);
+        Image updatedEntity = repository.save(map(dto));
+        return map(updatedEntity);
     }
 
     @Override
@@ -54,5 +54,13 @@ public class ImageServiceImpl implements ImageService {
     public List<ImageDTO> getAll() {
         List<ImageDTO> dtoList = mapper.mapAll(repository.findAll(), ImageDTO.class);
         return dtoList;
+    }
+
+    private ImageDTO map (Image entity) {
+        return mapper.map(entity, ImageDTO.class);
+    }
+
+    private Image map (ImageDTO dto) {
+        return mapper.map(dto, Image.class);
     }
 }
