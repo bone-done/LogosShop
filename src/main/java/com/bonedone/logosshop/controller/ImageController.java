@@ -22,7 +22,7 @@ public class ImageController {
     @Autowired
     private FileStorageService fileStorageService;
 
-    @GetMapping
+    @GetMapping("{id}")
     public ResponseEntity<ImageDTO> getImageById (@PathVariable String id) {
         return ResponseEntity.ok(service.getEntity(id));
     }
